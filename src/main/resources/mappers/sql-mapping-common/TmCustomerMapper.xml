@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.my.websys.login.dao.TmCustomerMapper" >
+  <resultMap id="BaseResultMap" type="cn.my.websys.login.dto.TmCustomer" >
+    <id column="CUST_ID" property="custId" jdbcType="BIGINT" />
+    <result column="ORG" property="org" jdbcType="CHAR" />
+    <result column="ID_NO" property="idNo" jdbcType="VARCHAR" />
+    <result column="ID_TYPE" property="idType" jdbcType="CHAR" />
+    <result column="TITLE" property="title" jdbcType="CHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="GENDER" property="gender" jdbcType="CHAR" />
+    <result column="BIRTHDAY" property="birthday" jdbcType="DATE" />
+    <result column="OCCUPATION" property="occupation" jdbcType="CHAR" />
+    <result column="BANKMEMBER_NO" property="bankmemberNo" jdbcType="VARCHAR" />
+    <result column="NATIONALITY" property="nationality" jdbcType="CHAR" />
+    <result column="PR_OF_COUNTRY" property="prOfCountry" jdbcType="CHAR" />
+    <result column="RESIDENCY_COUNTRY_CD" property="residencyCountryCd" jdbcType="CHAR" />
+    <result column="MARITAL_STATUS" property="maritalStatus" jdbcType="CHAR" />
+    <result column="QUALIFICATION" property="qualification" jdbcType="CHAR" />
+    <result column="SOCIAL_STATUS" property="socialStatus" jdbcType="CHAR" />
+    <result column="ID_ISSUER_ADDRESS" property="idIssuerAddress" jdbcType="VARCHAR" />
+    <result column="HOME_PHONE" property="homePhone" jdbcType="VARCHAR" />
+    <result column="HOUSE_OWNERSHIP" property="houseOwnership" jdbcType="CHAR" />
+    <result column="HOUSE_TYPE" property="houseType" jdbcType="CHAR" />
+    <result column="HOME_STAND_FROM" property="homeStandFrom" jdbcType="DATE" />
+    <result column="LIQUID_ASSET" property="liquidAsset" jdbcType="CHAR" />
+    <result column="MOBILE_NO" property="mobileNo" jdbcType="VARCHAR" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="EMP_STATUS" property="empStatus" jdbcType="CHAR" />
+    <result column="NBR_OF_DEPENDENTS" property="nbrOfDependents" jdbcType="INTEGER" />
+    <result column="LANGUAGE_IND" property="languageInd" jdbcType="VARCHAR" />
+    <result column="SETUP_DATE" property="setupDate" jdbcType="DATE" />
+    <result column="SOCIAL_INS_AMT" property="socialInsAmt" jdbcType="DECIMAL" />
+    <result column="DRIVE_LICENSE_ID" property="driveLicenseId" jdbcType="VARCHAR" />
+    <result column="DRIVE_LIC_REG_DATE" property="driveLicRegDate" jdbcType="DATE" />
+    <result column="OBLIGATE_QUESTION" property="obligateQuestion" jdbcType="VARCHAR" />
+    <result column="OBLIGATE_ANSWER" property="obligateAnswer" jdbcType="VARCHAR" />
+    <result column="EMP_STABILITY" property="empStability" jdbcType="CHAR" />
+    <result column="CORP_NAME" property="corpName" jdbcType="VARCHAR" />
+    <result column="USER_CODE1" property="userCode1" jdbcType="VARCHAR" />
+    <result column="USER_CODE2" property="userCode2" jdbcType="VARCHAR" />
+    <result column="USER_CODE3" property="userCode3" jdbcType="VARCHAR" />
+    <result column="USER_CODE4" property="userCode4" jdbcType="VARCHAR" />
+    <result column="USER_CODE5" property="userCode5" jdbcType="VARCHAR" />
+    <result column="USER_CODE6" property="userCode6" jdbcType="VARCHAR" />
+    <result column="USER_DATE1" property="userDate1" jdbcType="DATE" />
+    <result column="USER_DATE2" property="userDate2" jdbcType="DATE" />
+    <result column="USER_DATE3" property="userDate3" jdbcType="DATE" />
+    <result column="USER_DATE4" property="userDate4" jdbcType="DATE" />
+    <result column="USER_DATE5" property="userDate5" jdbcType="DATE" />
+    <result column="USER_DATE6" property="userDate6" jdbcType="DATE" />
+    <result column="USER_NUMBER1" property="userNumber1" jdbcType="INTEGER" />
+    <result column="USER_NUMBER2" property="userNumber2" jdbcType="INTEGER" />
+    <result column="USER_NUMBER3" property="userNumber3" jdbcType="INTEGER" />
+    <result column="USER_NUMBER4" property="userNumber4" jdbcType="INTEGER" />
+    <result column="USER_NUMBER5" property="userNumber5" jdbcType="INTEGER" />
+    <result column="USER_NUMBER6" property="userNumber6" jdbcType="INTEGER" />
+    <result column="USER_FIELD1" property="userField1" jdbcType="VARCHAR" />
+    <result column="USER_FIELD2" property="userField2" jdbcType="VARCHAR" />
+    <result column="USER_FIELD3" property="userField3" jdbcType="VARCHAR" />
+    <result column="USER_FIELD4" property="userField4" jdbcType="VARCHAR" />
+    <result column="USER_FIELD5" property="userField5" jdbcType="VARCHAR" />
+    <result column="USER_FIELD6" property="userField6" jdbcType="VARCHAR" />
+    <result column="USER_AMT1" property="userAmt1" jdbcType="DECIMAL" />
+    <result column="USER_AMT2" property="userAmt2" jdbcType="DECIMAL" />
+    <result column="USER_AMT3" property="userAmt3" jdbcType="DECIMAL" />
+    <result column="USER_AMT4" property="userAmt4" jdbcType="DECIMAL" />
+    <result column="USER_AMT5" property="userAmt5" jdbcType="DECIMAL" />
+    <result column="USER_AMT6" property="userAmt6" jdbcType="DECIMAL" />
+    <result column="BANK_CUSTOMER_ID" property="bankCustomerId" jdbcType="VARCHAR" />
+    <result column="EMB_NAME" property="embName" jdbcType="VARCHAR" />
+    <result column="JPA_VERSION" property="jpaVersion" jdbcType="INTEGER" />
+    <result column="CUST_LIMIT_ID" property="custLimitId" jdbcType="BIGINT" />
+    <result column="LAST_MODIFIED_DATETIME" property="lastModifiedDatetime" jdbcType="TIMESTAMP" />
+    <result column="CUST_LEVEL" property="custLevel" jdbcType="VARCHAR" />
+    <result column="PLEDEG_TYPE" property="pledegType" jdbcType="VARCHAR" />
+    <result column="SURNAME" property="surname" jdbcType="VARCHAR" />
+    <result column="CREATED_DATETIME" property="createdDatetime" jdbcType="TIMESTAMP" />
+    <result column="CUSTOMER_TYPE" property="customerType" jdbcType="VARCHAR" />
+    <result column="BLOCK_CODE" property="blockCode" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    CUST_ID, ORG, ID_NO, ID_TYPE, TITLE, NAME, GENDER, BIRTHDAY, OCCUPATION, BANKMEMBER_NO, 
+    NATIONALITY, PR_OF_COUNTRY, RESIDENCY_COUNTRY_CD, MARITAL_STATUS, QUALIFICATION, 
+    SOCIAL_STATUS, ID_ISSUER_ADDRESS, HOME_PHONE, HOUSE_OWNERSHIP, HOUSE_TYPE, HOME_STAND_FROM, 
+    LIQUID_ASSET, MOBILE_NO, EMAIL, EMP_STATUS, NBR_OF_DEPENDENTS, LANGUAGE_IND, SETUP_DATE, 
+    SOCIAL_INS_AMT, DRIVE_LICENSE_ID, DRIVE_LIC_REG_DATE, OBLIGATE_QUESTION, OBLIGATE_ANSWER, 
+    EMP_STABILITY, CORP_NAME, USER_CODE1, USER_CODE2, USER_CODE3, USER_CODE4, USER_CODE5, 
+    USER_CODE6, USER_DATE1, USER_DATE2, USER_DATE3, USER_DATE4, USER_DATE5, USER_DATE6, 
+    USER_NUMBER1, USER_NUMBER2, USER_NUMBER3, USER_NUMBER4, USER_NUMBER5, USER_NUMBER6, 
+    USER_FIELD1, USER_FIELD2, USER_FIELD3, USER_FIELD4, USER_FIELD5, USER_FIELD6, USER_AMT1, 
+    USER_AMT2, USER_AMT3, USER_AMT4, USER_AMT5, USER_AMT6, BANK_CUSTOMER_ID, EMB_NAME, 
+    JPA_VERSION, CUST_LIMIT_ID, LAST_MODIFIED_DATETIME, CUST_LEVEL, PLEDEG_TYPE, SURNAME, 
+    CREATED_DATETIME, CUSTOMER_TYPE, BLOCK_CODE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from tm_customer
+    where CUST_ID = #{custId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from tm_customer
+    where CUST_ID = #{custId,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="cn.my.websys.login.dto.TmCustomer" >
+    insert into tm_customer (CUST_ID, ORG, ID_NO, 
+      ID_TYPE, TITLE, NAME, GENDER, 
+      BIRTHDAY, OCCUPATION, BANKMEMBER_NO, 
+      NATIONALITY, PR_OF_COUNTRY, RESIDENCY_COUNTRY_CD, 
+      MARITAL_STATUS, QUALIFICATION, SOCIAL_STATUS, 
+      ID_ISSUER_ADDRESS, HOME_PHONE, HOUSE_OWNERSHIP, 
+      HOUSE_TYPE, HOME_STAND_FROM, LIQUID_ASSET, 
+      MOBILE_NO, EMAIL, EMP_STATUS, 
+      NBR_OF_DEPENDENTS, LANGUAGE_IND, SETUP_DATE, 
+      SOCIAL_INS_AMT, DRIVE_LICENSE_ID, DRIVE_LIC_REG_DATE, 
+      OBLIGATE_QUESTION, OBLIGATE_ANSWER, EMP_STABILITY, 
+      CORP_NAME, USER_CODE1, USER_CODE2, 
+      USER_CODE3, USER_CODE4, USER_CODE5, 
+      USER_CODE6, USER_DATE1, USER_DATE2, 
+      USER_DATE3, USER_DATE4, USER_DATE5, 
+      USER_DATE6, USER_NUMBER1, USER_NUMBER2, 
+      USER_NUMBER3, USER_NUMBER4, USER_NUMBER5, 
+      USER_NUMBER6, USER_FIELD1, USER_FIELD2, 
+      USER_FIELD3, USER_FIELD4, USER_FIELD5, 
+      USER_FIELD6, USER_AMT1, USER_AMT2, 
+      USER_AMT3, USER_AMT4, USER_AMT5, 
+      USER_AMT6, BANK_CUSTOMER_ID, EMB_NAME, 
+      JPA_VERSION, CUST_LIMIT_ID, LAST_MODIFIED_DATETIME, 
+      CUST_LEVEL, PLEDEG_TYPE, SURNAME, 
+      CREATED_DATETIME, CUSTOMER_TYPE, BLOCK_CODE
+      )
+    values (#{custId,jdbcType=BIGINT}, #{org,jdbcType=CHAR}, #{idNo,jdbcType=VARCHAR}, 
+      #{idType,jdbcType=CHAR}, #{title,jdbcType=CHAR}, #{name,jdbcType=VARCHAR}, #{gender,jdbcType=CHAR}, 
+      #{birthday,jdbcType=DATE}, #{occupation,jdbcType=CHAR}, #{bankmemberNo,jdbcType=VARCHAR}, 
+      #{nationality,jdbcType=CHAR}, #{prOfCountry,jdbcType=CHAR}, #{residencyCountryCd,jdbcType=CHAR}, 
+      #{maritalStatus,jdbcType=CHAR}, #{qualification,jdbcType=CHAR}, #{socialStatus,jdbcType=CHAR}, 
+      #{idIssuerAddress,jdbcType=VARCHAR}, #{homePhone,jdbcType=VARCHAR}, #{houseOwnership,jdbcType=CHAR}, 
+      #{houseType,jdbcType=CHAR}, #{homeStandFrom,jdbcType=DATE}, #{liquidAsset,jdbcType=CHAR}, 
+      #{mobileNo,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{empStatus,jdbcType=CHAR}, 
+      #{nbrOfDependents,jdbcType=INTEGER}, #{languageInd,jdbcType=VARCHAR}, #{setupDate,jdbcType=DATE}, 
+      #{socialInsAmt,jdbcType=DECIMAL}, #{driveLicenseId,jdbcType=VARCHAR}, #{driveLicRegDate,jdbcType=DATE}, 
+      #{obligateQuestion,jdbcType=VARCHAR}, #{obligateAnswer,jdbcType=VARCHAR}, #{empStability,jdbcType=CHAR}, 
+      #{corpName,jdbcType=VARCHAR}, #{userCode1,jdbcType=VARCHAR}, #{userCode2,jdbcType=VARCHAR}, 
+      #{userCode3,jdbcType=VARCHAR}, #{userCode4,jdbcType=VARCHAR}, #{userCode5,jdbcType=VARCHAR}, 
+      #{userCode6,jdbcType=VARCHAR}, #{userDate1,jdbcType=DATE}, #{userDate2,jdbcType=DATE}, 
+      #{userDate3,jdbcType=DATE}, #{userDate4,jdbcType=DATE}, #{userDate5,jdbcType=DATE}, 
+      #{userDate6,jdbcType=DATE}, #{userNumber1,jdbcType=INTEGER}, #{userNumber2,jdbcType=INTEGER}, 
+      #{userNumber3,jdbcType=INTEGER}, #{userNumber4,jdbcType=INTEGER}, #{userNumber5,jdbcType=INTEGER}, 
+      #{userNumber6,jdbcType=INTEGER}, #{userField1,jdbcType=VARCHAR}, #{userField2,jdbcType=VARCHAR}, 
+      #{userField3,jdbcType=VARCHAR}, #{userField4,jdbcType=VARCHAR}, #{userField5,jdbcType=VARCHAR}, 
+      #{userField6,jdbcType=VARCHAR}, #{userAmt1,jdbcType=DECIMAL}, #{userAmt2,jdbcType=DECIMAL}, 
+      #{userAmt3,jdbcType=DECIMAL}, #{userAmt4,jdbcType=DECIMAL}, #{userAmt5,jdbcType=DECIMAL}, 
+      #{userAmt6,jdbcType=DECIMAL}, #{bankCustomerId,jdbcType=VARCHAR}, #{embName,jdbcType=VARCHAR}, 
+      #{jpaVersion,jdbcType=INTEGER}, #{custLimitId,jdbcType=BIGINT}, #{lastModifiedDatetime,jdbcType=TIMESTAMP}, 
+      #{custLevel,jdbcType=VARCHAR}, #{pledegType,jdbcType=VARCHAR}, #{surname,jdbcType=VARCHAR}, 
+      #{createdDatetime,jdbcType=TIMESTAMP}, #{customerType,jdbcType=VARCHAR}, #{blockCode,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.my.websys.login.dto.TmCustomer" >
+    insert into tm_customer
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="custId != null" >
+        CUST_ID,
+      </if>
+      <if test="org != null" >
+        ORG,
+      </if>
+      <if test="idNo != null" >
+        ID_NO,
+      </if>
+      <if test="idType != null" >
+        ID_TYPE,
+      </if>
+      <if test="title != null" >
+        TITLE,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="gender != null" >
+        GENDER,
+      </if>
+      <if test="birthday != null" >
+        BIRTHDAY,
+      </if>
+      <if test="occupation != null" >
+        OCCUPATION,
+      </if>
+      <if test="bankmemberNo != null" >
+        BANKMEMBER_NO,
+      </if>
+      <if test="nationality != null" >
+        NATIONALITY,
+      </if>
+      <if test="prOfCountry != null" >
+        PR_OF_COUNTRY,
+      </if>
+      <if test="residencyCountryCd != null" >
+        RESIDENCY_COUNTRY_CD,
+      </if>
+      <if test="maritalStatus != null" >
+        MARITAL_STATUS,
+      </if>
+      <if test="qualification != null" >
+        QUALIFICATION,
+      </if>
+      <if test="socialStatus != null" >
+        SOCIAL_STATUS,
+      </if>
+      <if test="idIssuerAddress != null" >
+        ID_ISSUER_ADDRESS,
+      </if>
+      <if test="homePhone != null" >
+        HOME_PHONE,
+      </if>
+      <if test="houseOwnership != null" >
+        HOUSE_OWNERSHIP,
+      </if>
+      <if test="houseType != null" >
+        HOUSE_TYPE,
+      </if>
+      <if test="homeStandFrom != null" >
+        HOME_STAND_FROM,
+      </if>
+      <if test="liquidAsset != null" >
+        LIQUID_ASSET,
+      </if>
+      <if test="mobileNo != null" >
+        MOBILE_NO,
+      </if>
+      <if test="email != null" >
+        EMAIL,
+      </if>
+      <if test="empStatus != null" >
+        EMP_STATUS,
+      </if>
+      <if test="nbrOfDependents != null" >
+        NBR_OF_DEPENDENTS,
+      </if>
+      <if test="languageInd != null" >
+        LANGUAGE_IND,
+      </if>
+      <if test="setupDate != null" >
+        SETUP_DATE,
+      </if>
+      <if test="socialInsAmt != null" >
+        SOCIAL_INS_AMT,
+      </if>
+      <if test="driveLicenseId != null" >
+        DRIVE_LICENSE_ID,
+      </if>
+      <if test="driveLicRegDate != null" >
+        DRIVE_LIC_REG_DATE,
+      </if>
+      <if test="obligateQuestion != null" >
+        OBLIGATE_QUESTION,
+      </if>
+      <if test="obligateAnswer != null" >
+        OBLIGATE_ANSWER,
+      </if>
+      <if test="empStability != null" >
+        EMP_STABILITY,
+      </if>
+      <if test="corpName != null" >
+        CORP_NAME,
+      </if>
+      <if test="userCode1 != null" >
+        USER_CODE1,
+      </if>
+      <if test="userCode2 != null" >
+        USER_CODE2,
+      </if>
+      <if test="userCode3 != null" >
+        USER_CODE3,
+      </if>
+      <if test="userCode4 != null" >
+        USER_CODE4,
+      </if>
+      <if test="userCode5 != null" >
+        USER_CODE5,
+      </if>
+      <if test="userCode6 != null" >
+        USER_CODE6,
+      </if>
+      <if test="userDate1 != null" >
+        USER_DATE1,
+      </if>
+      <if test="userDate2 != null" >
+        USER_DATE2,
+      </if>
+      <if test="userDate3 != null" >
+        USER_DATE3,
+      </if>
+      <if test="userDate4 != null" >
+        USER_DATE4,
+      </if>
+      <if test="userDate5 != null" >
+        USER_DATE5,
+      </if>
+      <if test="userDate6 != null" >
+        USER_DATE6,
+      </if>
+      <if test="userNumber1 != null" >
+        USER_NUMBER1,
+      </if>
+      <if test="userNumber2 != null" >
+        USER_NUMBER2,
+      </if>
+      <if test="userNumber3 != null" >
+        USER_NUMBER3,
+      </if>
+      <if test="userNumber4 != null" >
+        USER_NUMBER4,
+      </if>
+      <if test="userNumber5 != null" >
+        USER_NUMBER5,
+      </if>
+      <if test="userNumber6 != null" >
+        USER_NUMBER6,
+      </if>
+      <if test="userField1 != null" >
+        USER_FIELD1,
+      </if>
+      <if test="userField2 != null" >
+        USER_FIELD2,
+      </if>
+      <if test="userField3 != null" >
+        USER_FIELD3,
+      </if>
+      <if test="userField4 != null" >
+        USER_FIELD4,
+      </if>
+      <if test="userField5 != null" >
+        USER_FIELD5,
+      </if>
+      <if test="userField6 != null" >
+        USER_FIELD6,
+      </if>
+      <if test="userAmt1 != null" >
+        USER_AMT1,
+      </if>
+      <if test="userAmt2 != null" >
+        USER_AMT2,
+      </if>
+      <if test="userAmt3 != null" >
+        USER_AMT3,
+      </if>
+      <if test="userAmt4 != null" >
+        USER_AMT4,
+      </if>
+      <if test="userAmt5 != null" >
+        USER_AMT5,
+      </if>
+      <if test="userAmt6 != null" >
+        USER_AMT6,
+      </if>
+      <if test="bankCustomerId != null" >
+        BANK_CUSTOMER_ID,
+      </if>
+      <if test="embName != null" >
+        EMB_NAME,
+      </if>
+      <if test="jpaVersion != null" >
+        JPA_VERSION,
+      </if>
+      <if test="custLimitId != null" >
+        CUST_LIMIT_ID,
+      </if>
+      <if test="lastModifiedDatetime != null" >
+        LAST_MODIFIED_DATETIME,
+      </if>
+      <if test="custLevel != null" >
+        CUST_LEVEL,
+      </if>
+      <if test="pledegType != null" >
+        PLEDEG_TYPE,
+      </if>
+      <if test="surname != null" >
+        SURNAME,
+      </if>
+      <if test="createdDatetime != null" >
+        CREATED_DATETIME,
+      </if>
+      <if test="customerType != null" >
+        CUSTOMER_TYPE,
+      </if>
+      <if test="blockCode != null" >
+        BLOCK_CODE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="custId != null" >
+        #{custId,jdbcType=BIGINT},
+      </if>
+      <if test="org != null" >
+        #{org,jdbcType=CHAR},
+      </if>
+      <if test="idNo != null" >
+        #{idNo,jdbcType=VARCHAR},
+      </if>
+      <if test="idType != null" >
+        #{idType,jdbcType=CHAR},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=CHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        #{gender,jdbcType=CHAR},
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=DATE},
+      </if>
+      <if test="occupation != null" >
+        #{occupation,jdbcType=CHAR},
+      </if>
+      <if test="bankmemberNo != null" >
+        #{bankmemberNo,jdbcType=VARCHAR},
+      </if>
+      <if test="nationality != null" >
+        #{nationality,jdbcType=CHAR},
+      </if>
+      <if test="prOfCountry != null" >
+        #{prOfCountry,jdbcType=CHAR},
+      </if>
+      <if test="residencyCountryCd != null" >
+        #{residencyCountryCd,jdbcType=CHAR},
+      </if>
+      <if test="maritalStatus != null" >
+        #{maritalStatus,jdbcType=CHAR},
+      </if>
+      <if test="qualification != null" >
+        #{qualification,jdbcType=CHAR},
+      </if>
+      <if test="socialStatus != null" >
+        #{socialStatus,jdbcType=CHAR},
+      </if>
+      <if test="idIssuerAddress != null" >
+        #{idIssuerAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="homePhone != null" >
+        #{homePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="houseOwnership != null" >
+        #{houseOwnership,jdbcType=CHAR},
+      </if>
+      <if test="houseType != null" >
+        #{houseType,jdbcType=CHAR},
+      </if>
+      <if test="homeStandFrom != null" >
+        #{homeStandFrom,jdbcType=DATE},
+      </if>
+      <if test="liquidAsset != null" >
+        #{liquidAsset,jdbcType=CHAR},
+      </if>
+      <if test="mobileNo != null" >
+        #{mobileNo,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="empStatus != null" >
+        #{empStatus,jdbcType=CHAR},
+      </if>
+      <if test="nbrOfDependents != null" >
+        #{nbrOfDependents,jdbcType=INTEGER},
+      </if>
+      <if test="languageInd != null" >
+        #{languageInd,jdbcType=VARCHAR},
+      </if>
+      <if test="setupDate != null" >
+        #{setupDate,jdbcType=DATE},
+      </if>
+      <if test="socialInsAmt != null" >
+        #{socialInsAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="driveLicenseId != null" >
+        #{driveLicenseId,jdbcType=VARCHAR},
+      </if>
+      <if test="driveLicRegDate != null" >
+        #{driveLicRegDate,jdbcType=DATE},
+      </if>
+      <if test="obligateQuestion != null" >
+        #{obligateQuestion,jdbcType=VARCHAR},
+      </if>
+      <if test="obligateAnswer != null" >
+        #{obligateAnswer,jdbcType=VARCHAR},
+      </if>
+      <if test="empStability != null" >
+        #{empStability,jdbcType=CHAR},
+      </if>
+      <if test="corpName != null" >
+        #{corpName,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode1 != null" >
+        #{userCode1,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode2 != null" >
+        #{userCode2,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode3 != null" >
+        #{userCode3,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode4 != null" >
+        #{userCode4,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode5 != null" >
+        #{userCode5,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode6 != null" >
+        #{userCode6,jdbcType=VARCHAR},
+      </if>
+      <if test="userDate1 != null" >
+        #{userDate1,jdbcType=DATE},
+      </if>
+      <if test="userDate2 != null" >
+        #{userDate2,jdbcType=DATE},
+      </if>
+      <if test="userDate3 != null" >
+        #{userDate3,jdbcType=DATE},
+      </if>
+      <if test="userDate4 != null" >
+        #{userDate4,jdbcType=DATE},
+      </if>
+      <if test="userDate5 != null" >
+        #{userDate5,jdbcType=DATE},
+      </if>
+      <if test="userDate6 != null" >
+        #{userDate6,jdbcType=DATE},
+      </if>
+      <if test="userNumber1 != null" >
+        #{userNumber1,jdbcType=INTEGER},
+      </if>
+      <if test="userNumber2 != null" >
+        #{userNumber2,jdbcType=INTEGER},
+      </if>
+      <if test="userNumber3 != null" >
+        #{userNumber3,jdbcType=INTEGER},
+      </if>
+      <if test="userNumber4 != null" >
+        #{userNumber4,jdbcType=INTEGER},
+      </if>
+      <if test="userNumber5 != null" >
+        #{userNumber5,jdbcType=INTEGER},
+      </if>
+      <if test="userNumber6 != null" >
+        #{userNumber6,jdbcType=INTEGER},
+      </if>
+      <if test="userField1 != null" >
+        #{userField1,jdbcType=VARCHAR},
+      </if>
+      <if test="userField2 != null" >
+        #{userField2,jdbcType=VARCHAR},
+      </if>
+      <if test="userField3 != null" >
+        #{userField3,jdbcType=VARCHAR},
+      </if>
+      <if test="userField4 != null" >
+        #{userField4,jdbcType=VARCHAR},
+      </if>
+      <if test="userField5 != null" >
+        #{userField5,jdbcType=VARCHAR},
+      </if>
+      <if test="userField6 != null" >
+        #{userField6,jdbcType=VARCHAR},
+      </if>
+      <if test="userAmt1 != null" >
+        #{userAmt1,jdbcType=DECIMAL},
+      </if>
+      <if test="userAmt2 != null" >
+        #{userAmt2,jdbcType=DECIMAL},
+      </if>
+      <if test="userAmt3 != null" >
+        #{userAmt3,jdbcType=DECIMAL},
+      </if>
+      <if test="userAmt4 != null" >
+        #{userAmt4,jdbcType=DECIMAL},
+      </if>
+      <if test="userAmt5 != null" >
+        #{userAmt5,jdbcType=DECIMAL},
+      </if>
+      <if test="userAmt6 != null" >
+        #{userAmt6,jdbcType=DECIMAL},
+      </if>
+      <if test="bankCustomerId != null" >
+        #{bankCustomerId,jdbcType=VARCHAR},
+      </if>
+      <if test="embName != null" >
+        #{embName,jdbcType=VARCHAR},
+      </if>
+      <if test="jpaVersion != null" >
+        #{jpaVersion,jdbcType=INTEGER},
+      </if>
+      <if test="custLimitId != null" >
+        #{custLimitId,jdbcType=BIGINT},
+      </if>
+      <if test="lastModifiedDatetime != null" >
+        #{lastModifiedDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="custLevel != null" >
+        #{custLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="pledegType != null" >
+        #{pledegType,jdbcType=VARCHAR},
+      </if>
+      <if test="surname != null" >
+        #{surname,jdbcType=VARCHAR},
+      </if>
+      <if test="createdDatetime != null" >
+        #{createdDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="customerType != null" >
+        #{customerType,jdbcType=VARCHAR},
+      </if>
+      <if test="blockCode != null" >
+        #{blockCode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.my.websys.login.dto.TmCustomer" >
+    update tm_customer
+    <set >
+      <if test="org != null" >
+        ORG = #{org,jdbcType=CHAR},
+      </if>
+      <if test="idNo != null" >
+        ID_NO = #{idNo,jdbcType=VARCHAR},
+      </if>
+      <if test="idType != null" >
+        ID_TYPE = #{idType,jdbcType=CHAR},
+      </if>
+      <if test="title != null" >
+        TITLE = #{title,jdbcType=CHAR},
+      </if>
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null" >
+        GENDER = #{gender,jdbcType=CHAR},
+      </if>
+      <if test="birthday != null" >
+        BIRTHDAY = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="occupation != null" >
+        OCCUPATION = #{occupation,jdbcType=CHAR},
+      </if>
+      <if test="bankmemberNo != null" >
+        BANKMEMBER_NO = #{bankmemberNo,jdbcType=VARCHAR},
+      </if>
+      <if test="nationality != null" >
+        NATIONALITY = #{nationality,jdbcType=CHAR},
+      </if>
+      <if test="prOfCountry != null" >
+        PR_OF_COUNTRY = #{prOfCountry,jdbcType=CHAR},
+      </if>
+      <if test="residencyCountryCd != null" >
+        RESIDENCY_COUNTRY_CD = #{residencyCountryCd,jdbcType=CHAR},
+      </if>
+      <if test="maritalStatus != null" >
+        MARITAL_STATUS = #{maritalStatus,jdbcType=CHAR},
+      </if>
+      <if test="qualification != null" >
+        QUALIFICATION = #{qualification,jdbcType=CHAR},
+      </if>
+      <if test="socialStatus != null" >
+        SOCIAL_STATUS = #{socialStatus,jdbcType=CHAR},
+      </if>
+      <if test="idIssuerAddress != null" >
+        ID_ISSUER_ADDRESS = #{idIssuerAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="homePhone != null" >
+        HOME_PHONE = #{homePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="houseOwnership != null" >
+        HOUSE_OWNERSHIP = #{houseOwnership,jdbcType=CHAR},
+      </if>
+      <if test="houseType != null" >
+        HOUSE_TYPE = #{houseType,jdbcType=CHAR},
+      </if>
+      <if test="homeStandFrom != null" >
+        HOME_STAND_FROM = #{homeStandFrom,jdbcType=DATE},
+      </if>
+      <if test="liquidAsset != null" >
+        LIQUID_ASSET = #{liquidAsset,jdbcType=CHAR},
+      </if>
+      <if test="mobileNo != null" >
+        MOBILE_NO = #{mobileNo,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null" >
+        EMAIL = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="empStatus != null" >
+        EMP_STATUS = #{empStatus,jdbcType=CHAR},
+      </if>
+      <if test="nbrOfDependents != null" >
+        NBR_OF_DEPENDENTS = #{nbrOfDependents,jdbcType=INTEGER},
+      </if>
+      <if test="languageInd != null" >
+        LANGUAGE_IND = #{languageInd,jdbcType=VARCHAR},
+      </if>
+      <if test="setupDate != null" >
+        SETUP_DATE = #{setupDate,jdbcType=DATE},
+      </if>
+      <if test="socialInsAmt != null" >
+        SOCIAL_INS_AMT = #{socialInsAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="driveLicenseId != null" >
+        DRIVE_LICENSE_ID = #{driveLicenseId,jdbcType=VARCHAR},
+      </if>
+      <if test="driveLicRegDate != null" >
+        DRIVE_LIC_REG_DATE = #{driveLicRegDate,jdbcType=DATE},
+      </if>
+      <if test="obligateQuestion != null" >
+        OBLIGATE_QUESTION = #{obligateQuestion,jdbcType=VARCHAR},
+      </if>
+      <if test="obligateAnswer != null" >
+        OBLIGATE_ANSWER = #{obligateAnswer,jdbcType=VARCHAR},
+      </if>
+      <if test="empStability != null" >
+        EMP_STABILITY = #{empStability,jdbcType=CHAR},
+      </if>
+      <if test="corpName != null" >
+        CORP_NAME = #{corpName,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode1 != null" >
+        USER_CODE1 = #{userCode1,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode2 != null" >
+        USER_CODE2 = #{userCode2,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode3 != null" >
+        USER_CODE3 = #{userCode3,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode4 != null" >
+        USER_CODE4 = #{userCode4,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode5 != null" >
+        USER_CODE5 = #{userCode5,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode6 != null" >
+        USER_CODE6 = #{userCode6,jdbcType=VARCHAR},
+      </if>
+      <if test="userDate1 != null" >
+        USER_DATE1 = #{userDate1,jdbcType=DATE},
+      </if>
+      <if test="userDate2 != null" >
+        USER_DATE2 = #{userDate2,jdbcType=DATE},
+      </if>
+      <if test="userDate3 != null" >
+        USER_DATE3 = #{userDate3,jdbcType=DATE},
+      </if>
+      <if test="userDate4 != null" >
+        USER_DATE4 = #{userDate4,jdbcType=DATE},
+      </if>
+      <if test="userDate5 != null" >
+        USER_DATE5 = #{userDate5,jdbcType=DATE},
+      </if>
+      <if test="userDate6 != null" >
+        USER_DATE6 = #{userDate6,jdbcType=DATE},
+      </if>
+      <if test="userNumber1 != null" >
+        USER_NUMBER1 = #{userNumber1,jdbcType=INTEGER},
+      </if>
+      <if test="userNumber2 != null" >
+        USER_NUMBER2 = #{userNumber2,jdbcType=INTEGER},
+      </if>
+      <if test="userNumber3 != null" >
+        USER_NUMBER3 = #{userNumber3,jdbcType=INTEGER},
+      </if>
+      <if test="userNumber4 != null" >
+        USER_NUMBER4 = #{userNumber4,jdbcType=INTEGER},
+      </if>
+      <if test="userNumber5 != null" >
+        USER_NUMBER5 = #{userNumber5,jdbcType=INTEGER},
+      </if>
+      <if test="userNumber6 != null" >
+        USER_NUMBER6 = #{userNumber6,jdbcType=INTEGER},
+      </if>
+      <if test="userField1 != null" >
+        USER_FIELD1 = #{userField1,jdbcType=VARCHAR},
+      </if>
+      <if test="userField2 != null" >
+        USER_FIELD2 = #{userField2,jdbcType=VARCHAR},
+      </if>
+      <if test="userField3 != null" >
+        USER_FIELD3 = #{userField3,jdbcType=VARCHAR},
+      </if>
+      <if test="userField4 != null" >
+        USER_FIELD4 = #{userField4,jdbcType=VARCHAR},
+      </if>
+      <if test="userField5 != null" >
+        USER_FIELD5 = #{userField5,jdbcType=VARCHAR},
+      </if>
+      <if test="userField6 != null" >
+        USER_FIELD6 = #{userField6,jdbcType=VARCHAR},
+      </if>
+      <if test="userAmt1 != null" >
+        USER_AMT1 = #{userAmt1,jdbcType=DECIMAL},
+      </if>
+      <if test="userAmt2 != null" >
+        USER_AMT2 = #{userAmt2,jdbcType=DECIMAL},
+      </if>
+      <if test="userAmt3 != null" >
+        USER_AMT3 = #{userAmt3,jdbcType=DECIMAL},
+      </if>
+      <if test="userAmt4 != null" >
+        USER_AMT4 = #{userAmt4,jdbcType=DECIMAL},
+      </if>
+      <if test="userAmt5 != null" >
+        USER_AMT5 = #{userAmt5,jdbcType=DECIMAL},
+      </if>
+      <if test="userAmt6 != null" >
+        USER_AMT6 = #{userAmt6,jdbcType=DECIMAL},
+      </if>
+      <if test="bankCustomerId != null" >
+        BANK_CUSTOMER_ID = #{bankCustomerId,jdbcType=VARCHAR},
+      </if>
+      <if test="embName != null" >
+        EMB_NAME = #{embName,jdbcType=VARCHAR},
+      </if>
+      <if test="jpaVersion != null" >
+        JPA_VERSION = #{jpaVersion,jdbcType=INTEGER},
+      </if>
+      <if test="custLimitId != null" >
+        CUST_LIMIT_ID = #{custLimitId,jdbcType=BIGINT},
+      </if>
+      <if test="lastModifiedDatetime != null" >
+        LAST_MODIFIED_DATETIME = #{lastModifiedDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="custLevel != null" >
+        CUST_LEVEL = #{custLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="pledegType != null" >
+        PLEDEG_TYPE = #{pledegType,jdbcType=VARCHAR},
+      </if>
+      <if test="surname != null" >
+        SURNAME = #{surname,jdbcType=VARCHAR},
+      </if>
+      <if test="createdDatetime != null" >
+        CREATED_DATETIME = #{createdDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="customerType != null" >
+        CUSTOMER_TYPE = #{customerType,jdbcType=VARCHAR},
+      </if>
+      <if test="blockCode != null" >
+        BLOCK_CODE = #{blockCode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where CUST_ID = #{custId,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.my.websys.login.dto.TmCustomer" >
+    update tm_customer
+    set ORG = #{org,jdbcType=CHAR},
+      ID_NO = #{idNo,jdbcType=VARCHAR},
+      ID_TYPE = #{idType,jdbcType=CHAR},
+      TITLE = #{title,jdbcType=CHAR},
+      NAME = #{name,jdbcType=VARCHAR},
+      GENDER = #{gender,jdbcType=CHAR},
+      BIRTHDAY = #{birthday,jdbcType=DATE},
+      OCCUPATION = #{occupation,jdbcType=CHAR},
+      BANKMEMBER_NO = #{bankmemberNo,jdbcType=VARCHAR},
+      NATIONALITY = #{nationality,jdbcType=CHAR},
+      PR_OF_COUNTRY = #{prOfCountry,jdbcType=CHAR},
+      RESIDENCY_COUNTRY_CD = #{residencyCountryCd,jdbcType=CHAR},
+      MARITAL_STATUS = #{maritalStatus,jdbcType=CHAR},
+      QUALIFICATION = #{qualification,jdbcType=CHAR},
+      SOCIAL_STATUS = #{socialStatus,jdbcType=CHAR},
+      ID_ISSUER_ADDRESS = #{idIssuerAddress,jdbcType=VARCHAR},
+      HOME_PHONE = #{homePhone,jdbcType=VARCHAR},
+      HOUSE_OWNERSHIP = #{houseOwnership,jdbcType=CHAR},
+      HOUSE_TYPE = #{houseType,jdbcType=CHAR},
+      HOME_STAND_FROM = #{homeStandFrom,jdbcType=DATE},
+      LIQUID_ASSET = #{liquidAsset,jdbcType=CHAR},
+      MOBILE_NO = #{mobileNo,jdbcType=VARCHAR},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      EMP_STATUS = #{empStatus,jdbcType=CHAR},
+      NBR_OF_DEPENDENTS = #{nbrOfDependents,jdbcType=INTEGER},
+      LANGUAGE_IND = #{languageInd,jdbcType=VARCHAR},
+      SETUP_DATE = #{setupDate,jdbcType=DATE},
+      SOCIAL_INS_AMT = #{socialInsAmt,jdbcType=DECIMAL},
+      DRIVE_LICENSE_ID = #{driveLicenseId,jdbcType=VARCHAR},
+      DRIVE_LIC_REG_DATE = #{driveLicRegDate,jdbcType=DATE},
+      OBLIGATE_QUESTION = #{obligateQuestion,jdbcType=VARCHAR},
+      OBLIGATE_ANSWER = #{obligateAnswer,jdbcType=VARCHAR},
+      EMP_STABILITY = #{empStability,jdbcType=CHAR},
+      CORP_NAME = #{corpName,jdbcType=VARCHAR},
+      USER_CODE1 = #{userCode1,jdbcType=VARCHAR},
+      USER_CODE2 = #{userCode2,jdbcType=VARCHAR},
+      USER_CODE3 = #{userCode3,jdbcType=VARCHAR},
+      USER_CODE4 = #{userCode4,jdbcType=VARCHAR},
+      USER_CODE5 = #{userCode5,jdbcType=VARCHAR},
+      USER_CODE6 = #{userCode6,jdbcType=VARCHAR},
+      USER_DATE1 = #{userDate1,jdbcType=DATE},
+      USER_DATE2 = #{userDate2,jdbcType=DATE},
+      USER_DATE3 = #{userDate3,jdbcType=DATE},
+      USER_DATE4 = #{userDate4,jdbcType=DATE},
+      USER_DATE5 = #{userDate5,jdbcType=DATE},
+      USER_DATE6 = #{userDate6,jdbcType=DATE},
+      USER_NUMBER1 = #{userNumber1,jdbcType=INTEGER},
+      USER_NUMBER2 = #{userNumber2,jdbcType=INTEGER},
+      USER_NUMBER3 = #{userNumber3,jdbcType=INTEGER},
+      USER_NUMBER4 = #{userNumber4,jdbcType=INTEGER},
+      USER_NUMBER5 = #{userNumber5,jdbcType=INTEGER},
+      USER_NUMBER6 = #{userNumber6,jdbcType=INTEGER},
+      USER_FIELD1 = #{userField1,jdbcType=VARCHAR},
+      USER_FIELD2 = #{userField2,jdbcType=VARCHAR},
+      USER_FIELD3 = #{userField3,jdbcType=VARCHAR},
+      USER_FIELD4 = #{userField4,jdbcType=VARCHAR},
+      USER_FIELD5 = #{userField5,jdbcType=VARCHAR},
+      USER_FIELD6 = #{userField6,jdbcType=VARCHAR},
+      USER_AMT1 = #{userAmt1,jdbcType=DECIMAL},
+      USER_AMT2 = #{userAmt2,jdbcType=DECIMAL},
+      USER_AMT3 = #{userAmt3,jdbcType=DECIMAL},
+      USER_AMT4 = #{userAmt4,jdbcType=DECIMAL},
+      USER_AMT5 = #{userAmt5,jdbcType=DECIMAL},
+      USER_AMT6 = #{userAmt6,jdbcType=DECIMAL},
+      BANK_CUSTOMER_ID = #{bankCustomerId,jdbcType=VARCHAR},
+      EMB_NAME = #{embName,jdbcType=VARCHAR},
+      JPA_VERSION = #{jpaVersion,jdbcType=INTEGER},
+      CUST_LIMIT_ID = #{custLimitId,jdbcType=BIGINT},
+      LAST_MODIFIED_DATETIME = #{lastModifiedDatetime,jdbcType=TIMESTAMP},
+      CUST_LEVEL = #{custLevel,jdbcType=VARCHAR},
+      PLEDEG_TYPE = #{pledegType,jdbcType=VARCHAR},
+      SURNAME = #{surname,jdbcType=VARCHAR},
+      CREATED_DATETIME = #{createdDatetime,jdbcType=TIMESTAMP},
+      CUSTOMER_TYPE = #{customerType,jdbcType=VARCHAR},
+      BLOCK_CODE = #{blockCode,jdbcType=VARCHAR}
+    where CUST_ID = #{custId,jdbcType=BIGINT}
+  </update>
+</mapper>
